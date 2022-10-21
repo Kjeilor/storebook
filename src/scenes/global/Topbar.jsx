@@ -1,4 +1,4 @@
-function index() {
+function Topbar() {
     return (
         <div>
             
@@ -6,4 +6,4 @@ function index() {
     )
 }
 
-export default index
+export default Topbar
