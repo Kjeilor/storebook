@@ -1,7 +1,9 @@
 import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 // import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
+import Menubar from "./scenes/global/Menubar";
+// import { Route } from "react-router-dom";
 // import Updates from "./scenes/updates";
 // import General from "./scenes/general";
 // import Explore from "./scenes/explore";
@@ -18,9 +20,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="App">
-          <main className="content">
-          <Topbar />
-          </main>
+          <Box display="flex">
+            <Menubar />
+            <main className="content">
+              <Topbar />
+            </main>
+          </Box>
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>

@@ -1,21 +1,28 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 
+const drawerWidth = 240;
+
 const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box
+      display="flex"
+      justifyContent="space-between"
+      p={1.7}
+      position="fixed"
+      sx={{ width: `calc(100% - ${drawerWidth}px)`}} // , borderBottom: '1px solid #e1e1e1'
+    >
       <Box display="flex" gap="1rem">
-
         {/* MENU BUTTON */}
 
         <IconButton fontSize="large">
