@@ -1,34 +1,35 @@
-import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider, Box } from "@mui/material";
-// import { Routes, Route } from "react-router-dom";
-import Topbar from "./scenes/global/Topbar";
-import Menubar from "./scenes/global/Menubar";
-// import { Route } from "react-router-dom";
-// import Updates from "./scenes/updates";
-// import General from "./scenes/general";
-// import Explore from "./scenes/explore";
-// import Storefront from "./scenes/storefront";
-// import Teams from "./scenes/teams";
-// import Marketing from "./scenes/marketing";
-// import SupplyDock from "./scenes/supplydock";
-// import Docs from "./scenes/docs";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./scenes/home/Home";
+import Login from "./scenes/login/Login";
+import Updates from "./scenes/updates/Updates";
+import General from "./scenes/general/General";
+import Explore from "./scenes/explore/Explore";
+import Storefront from "./scenes/storefront/Storefront";
+import Teams from "./scenes/teams/Teams";
+import Marketing from "./scenes/marketing/Marketing";
+import SupplyDock from "./scenes/supplydock/SupplyDock";
+import Documents from "./scenes/documents/Documents";
 
 function App() {
-  const [theme, colorMode] = useMode();
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className="App">
-          <Box display="flex">
-            <Menubar />
-            <main className="content">
-              <Topbar />
-            </main>
-          </Box>
-        </div>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="login" element={<Login />} />
+          </Route>
+          <Route path="/updates" element={<Updates />} />
+          <Route path="/general" element={<General />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/storefront" element={<Storefront />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/supplydock" element={<SupplyDock />} />
+          <Route path="/documents" element={<Documents />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
