@@ -1,9 +1,45 @@
-const Updates = () => {
-    return (
-        <div>
-            UPDATES
-        </div>
-    )
-}
+import { NavLink, Outlet } from "react-router-dom";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
+import "../styles/navbar.scss";
 
-export default Updates
+const Updates = () => {
+  return (
+    <div>
+      <title>Updates | Ateker</title>
+      <nav className="nav-btns">
+        <div className="nav-wrpr">
+          <div className="container">
+            <aside className="main-nav">
+              <div className="fxd-btn" id="menu-btn">
+                <MenuOutlinedIcon />
+              </div>
+
+              <main className="nav-lnks">
+                <div>
+                  <NavLink to="inbox" id="btn-lnk">
+                    Inbox
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink to="track" id="btn-lnk">
+                    Track
+                  </NavLink>
+                </div>
+              </main>
+            </aside>
+            <div className="app-btn" id="app-btn">
+              <AppsOutlinedIcon />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default Updates;

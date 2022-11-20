@@ -1,3 +1,132 @@
-.sidebar{
-    background-color: "green";
+.sb-container {
+  .sidebar {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    border-right: 1px solid lightgray;
+    height: 100%;
+    width: 100%;
+    width: 15rem;
+    min-height: 100vh;
+
+    .biz-prof {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid lightgray;
+    }
+
+    .menu-bar {
+      overflow-y: auto;
+      flex: 1 1 0%;
+
+      .menu-wrp {
+        padding: 1rem;
+
+        .m-title {
+          color: #262626;
+          padding-left: 0.5rem;
+        }
+
+        .menu-itm {
+          padding: 0rem;
+          margin-bottom: 0.5rem;
+          height: 2.5rem;
+          border-radius: 5px;
+          align-items: center;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          padding: 0rem 0.5rem;
+          gap: 0.5rem;
+          font-size: small;
+          font-weight: bold;
+          color: #656565;
+
+          .m-icn {
+            font-size: small;
+            position: relative;
+
+            .badge {
+              width: .5rem;
+              height: .5rem;
+              background-color: red;
+              border-radius: 50%;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: -3px;
+              right: -3px;
+            }
+          }
+
+          &:hover {
+            color: #262626;
+            background-color: #2626261a;
+          }
+
+          &:active{
+            color: #29ab87;
+            background-color: #29ab871a;
+          }
+        }
+        #menu-itm {
+          padding: 0rem;
+          margin-bottom: 0.5rem;
+          height: 2.5rem;
+          border-radius: 5px;
+          align-items: center;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          padding: 0rem 0.5rem;
+          gap: 0.5rem;
+          font-size: small;
+          font-weight: bold;
+          color: #656565;
+
+          .m-icn {
+            font-size: small;
+            position: relative;
+
+            .badge {
+              width: .5rem;
+              height: .5rem;
+              background-color: red;
+              border-radius: 50%;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: -3px;
+              right: -3px;
+            }
+          }
+
+          &:hover {
+            color: #262626;
+            background-color: #2626261a;
+          }
+
+          &.active{
+            color: #29ab87;
+            background-color: #29ab871a;
+          }
+        }
+      }
+    }
+
+    .usr-prof {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid lightgray;
+    }
+  }
 }
