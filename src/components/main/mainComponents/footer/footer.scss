@@ -1,10 +1,38 @@
-.ftr-wrpr{
-    z-index: 5;
+.ftr-wrpr {
+  z-index: 5;
+  width: 100%;
+  height: fit-content;
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    .footer{
-        height: 50px;
-        width: 100%;
-        background: lightblue;
+    min-height: 50px;
+    background: none;
 
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: #656565;
+
+      .lnk-cntr {
+        display: flex;
+        padding: 1rem 0rem;
+        min-width: 12rem;
+        justify-content: center;
+        align-items: center;
+        #ftr-lnk {
+          text-decoration: none;
+          color: #656565;
+          
+
+          &:hover {
+            color: #29ab87;
+          }
+        }
+      }
     }
+  }
 }

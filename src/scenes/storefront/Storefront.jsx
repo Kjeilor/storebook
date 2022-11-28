@@ -18,8 +18,8 @@ function Storefront() {
 
               <main className="nav-lnks">
                 <div>
-                  <NavLink to="metrics" id="btn-lnk">
-                    Metrics
+                  <NavLink to="dashboard" id="btn-lnk">
+                    Dashboard
                   </NavLink>
                 </div>
                 <div>

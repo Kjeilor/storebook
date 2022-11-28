@@ -15,15 +15,15 @@ import Support from "../scenes/general/pages/support/Support";
 import Explore from "../scenes/explore/Explore";
 
 import Storefront from "../scenes/storefront/Storefront";
-import Metrics from "../scenes/storefront/pages/metrics/Metrics";
+import Dashboard from "../scenes/storefront/pages/dashboard/Dashboard";
 import Customers from "../scenes/storefront/pages/customers/Customers";
 import Orders from "../scenes/storefront/pages/orders/Orders";
 
 import Teams from "../scenes/teams/Teams";
 
 import Catalogue from "../scenes/catalogue/Catalogue";
-import Products from "../scenes/catalogue/pages/products/Products"
-import Services from "../scenes/catalogue/pages/services/Services"
+import Products from "../scenes/catalogue/pages/products/Products";
+import Services from "../scenes/catalogue/pages/services/Services";
 
 import Marketing from "../scenes/marketing/Marketing";
 import Campaigns from "../scenes/marketing/pages/campaigns/Campaigns";
@@ -64,8 +64,8 @@ const Router = () => {
       </Route>
 
       <Route path="storefront" element={<Storefront />}>
-        <Route index element={<Navigate to="metrics" />} />
-        <Route path="metrics" element={<Metrics />} />
+        <Route index element={<Navigate to="dashboard" />} />
+        <Route path="dashboard" element={<Dashboard />} />
         <Route path="customers" element={<Customers />} />
         <Route path="orders" element={<Orders />} />
       </Route>

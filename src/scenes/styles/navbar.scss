@@ -64,8 +64,8 @@
           }
 
           &.active {
-            color: #29ab87;
-            background-color: #29ab871a;
+            color: #ffffff;
+            background-color: #29ab87;
           }
         }
       }
@@ -106,11 +106,11 @@
             justify-content: center;
             width: 2rem;
             height: 2rem;
-            background-color: #29ab8733;
+            background-color: #29ab87;
             border: 0;
             border-radius: 5px;
             font-size: small;
-            color: #29ab87;
+            color: #ffffff;
             cursor: pointer;
             padding: 0rem 1rem;
           }
@@ -139,8 +139,8 @@
       }
 
       &:active {
-        color: #29ab87;
-        background-color: #29ab871a;
+        color: #ffffff;
+        background-color: #29ab87;
       }
     }
   }
