@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MenuBtn from "../../components/menuBtn/MenuBtn";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import "../styles/navbar.scss";
 import "./storefront.scss";
@@ -12,9 +12,7 @@ function Storefront() {
         <div className="nav-wrpr">
           <div className="container">
             <aside className="main-nav">
-              <div className="fxd-btn" id="menu-btn">
-                <MenuOutlinedIcon />
-              </div>
+              <MenuBtn />
 
               <main className="nav-lnks">
                 <div>

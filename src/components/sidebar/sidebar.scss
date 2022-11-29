@@ -1,13 +1,21 @@
 .sb-container {
   .sidebar {
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    flex: 1 1 0%;
-    border-right: 1px solid lightgray;
-    height: 100%;
-    width: 100%;
     width: 15rem;
+    position: absolute;
+    z-index: 100;
+    background-color: #ffffff;
+    border-right: 1px solid #dcdcdc;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+    will-change: transform;
+    transform: translateX(-100%);
+    opacity: 0;
+    height: 100%;
     min-height: 100vh;
 
     .biz-prof {
@@ -28,7 +36,6 @@
         .m-title {
           color: #262626;
           padding-left: 0.5rem;
-          
         }
 
         #menu-itm {
@@ -52,9 +59,9 @@
           }
 
           .badge {
-            margin-right: .5rem;
-            width: .5rem;
-            height: .5rem;
+            margin-right: 0.5rem;
+            width: 0.5rem;
+            height: 0.5rem;
             background-color: orangered;
             border-radius: 50%;
             color: white;
@@ -71,11 +78,11 @@
             background-color: #2626261a;
           }
 
-          &.active{
+          &.active {
             color: #ffffff;
             background-color: #29ab87;
 
-            .badge{
+            .badge {
               background-color: palegreen;
             }
           }
@@ -89,6 +96,14 @@
       align-items: center;
       justify-content: center;
       border-top: 1px solid lightgray;
+    }
+
+    @media (min-width: 48em){
+      position: static;
+      opacity: 1;
+      transform: none;
+      transition: none 0s ease 0s;
+      width: 232px;
     }
   }
 }

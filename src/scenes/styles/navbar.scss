@@ -22,14 +22,13 @@
       .fxd-btn {
         display: flex;
         align-items: center;
-        color: #2626261a;
+        color: #656565;
         padding: .5rem;
         border: none;
         border-radius: 50%;
         background-color: transparent;
         cursor: pointer;
         align-items: center;
-        display: none;
 
         &:hover {
           color: #262626;
@@ -39,6 +38,10 @@
         &:active {
           color: #29ab87;
           background-color: #29ab871a;
+        }
+
+        @media (min-width: 48em){
+          display: none;
         }
       }
 
