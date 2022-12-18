@@ -1,6 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
-import MenuBtn from "../../components/menuBtn/MenuBtn";
 import "../styles/navbar.scss";
 
 function SupplyDock() {
@@ -11,8 +10,6 @@ function SupplyDock() {
         <div className="nav-wrpr">
           <div className="container">
             <aside className="main-nav">
-              <MenuBtn />
-
               <main className="nav-lnks">
                 <div>
                   <NavLink to="suppliers" id="btn-lnk">

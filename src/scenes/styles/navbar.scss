@@ -12,38 +12,17 @@
     align-items: center;
     margin: 0rem 2rem;
     gap: 2rem;
+    overflow-y: auto;
+
+    @media (max-width: 48em) {
+      margin: 0rem 2rem 0rem 5rem;
+    }
 
     .main-nav {
       display: flex;
       gap: 1rem;
       align-items: center;
       width: 100%;
-
-      .fxd-btn {
-        display: flex;
-        align-items: center;
-        color: #656565;
-        padding: .5rem;
-        border: none;
-        border-radius: 50%;
-        background-color: transparent;
-        cursor: pointer;
-        align-items: center;
-
-        &:hover {
-          color: #262626;
-          background-color: #2626261a;
-        }
-
-        &:active {
-          color: #29ab87;
-          background-color: #29ab871a;
-        }
-
-        @media (min-width: 48em){
-          display: none;
-        }
-      }
 
       .nav-lnks {
         display: flex;
@@ -134,7 +113,6 @@
       border-radius: 50%;
       background-color: transparent;
       cursor: pointer;
-      align-items: center;
 
       &:hover {
         color: #262626;

@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from "react-router-dom";
-import MenuBtn from "../../components/menuBtn/MenuBtn";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import "../styles/navbar.scss";
 
@@ -11,8 +10,6 @@ const Updates = () => {
         <div className="nav-wrpr">
           <div className="container">
             <aside className="main-nav">
-              <MenuBtn />
-
               <main className="nav-lnks">
                 <div>
                   <NavLink to="inbox" id="btn-lnk">

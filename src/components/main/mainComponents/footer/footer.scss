@@ -15,12 +15,13 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      gap: 3rem;
       color: #656565;
 
       .lnk-cntr {
         display: flex;
         padding: 1rem 0rem;
-        min-width: 12rem;
+        width: fit-content;
         justify-content: center;
         align-items: center;
         #ftr-lnk {

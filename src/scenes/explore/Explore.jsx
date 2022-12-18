@@ -1,4 +1,3 @@
-import MenuBtn from "../../components/menuBtn/MenuBtn";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "../styles/navbar.scss";
@@ -11,7 +10,6 @@ function Explore() {
         <div className="nav-wrpr">
           <div className="container">
             <aside className="main-nav">
-              <MenuBtn />
 
               <main className="finder">
                 <form action="" className="find-bar">
