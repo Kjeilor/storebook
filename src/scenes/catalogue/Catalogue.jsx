@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function Catalogue() {
   return (
     <div>
-      <title>Inventory | Ateker</title>
+      <title>Catalogue | Ateker</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

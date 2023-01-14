@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  width: 15rem;
+  height: 22rem;
+
+  .pc-scn-1 {
+    .prd-img {
+      display: flex;
+      background-color: lightgray;
+      height: 11rem;
+      width: 15rem;
+      justify-content: center;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .prd-attr {
+      display: flex;
+      gap: 0.5rem;
+      margin: .5rem .5rem;
+    }
+  }
+
+  .pc-scn-2 {
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    .prd-ttl {
+      margin: .5rem 0rem;
+    }
+  }
+}
