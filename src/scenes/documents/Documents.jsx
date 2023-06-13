@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function Documents() {
   return (
     <div>
-      <title>Documents | Ateker</title>
+      <title>Documents</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

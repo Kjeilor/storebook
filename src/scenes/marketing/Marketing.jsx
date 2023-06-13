@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function Marketing() {
   return (
     <div>
-      <title>Marketing | Ateker</title>
+      <title>Marketing</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

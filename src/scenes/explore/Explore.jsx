@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function Explore() {
   return (
     <div>
-      <title>Explore | Ateker</title>
+      <title>Explore</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

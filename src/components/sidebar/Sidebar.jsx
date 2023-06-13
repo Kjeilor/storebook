@@ -1,4 +1,4 @@
-import { React } from "react";
+import {React, useState, useEffect} from "react";
 import "./sidebar.scss";
 import { NavLink } from "react-router-dom";
 import BizProfile from "./sidebarComponents/bizProfile/BizProfile";
@@ -15,36 +15,60 @@ import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutl
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 function Sidebar() {
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSidebarVisible(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
+
   return (
-    <div className= "sidebar">
-      <div className="biz-prof">
-        <BizProfile />
-      </div>
-      <div className="menu-bar">
-        <div className="menu-wrp">
-          <div>
-            <NavLink id="menu-itm" to="/updates">
-              <div className="m-icn">
-                <NotificationsOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Updates</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="general">
-              <div className="m-icn">
-                <SettingsOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">General</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
+    <div className={`sidebar ${isSidebarVisible ? "" : "hidden"}`}>
+      <button className="toggle" onClick={toggleSidebar}>
+        <MenuOutlinedIcon />
+      </button>
+      <div className="sidebar-content">
+        <div className="biz-prof">
+          <BizProfile />
+        </div>
+        <div className="menu-bar">
+          <div className="menu-wrp">
+            <div>
+              <NavLink id="menu-itm" to="/updates">
+                <div className="m-icn">
+                  <NotificationsOutlinedIcon />
+                </div>
+                <div>
+                  <span className="title m-name">Updates</span>
+                </div>
+                <div className="badge upt-bdg"></div>
+              </NavLink>
+            </div>
+            <div>
+              <NavLink id="menu-itm" to="general">
+                <div className="m-icn">
+                  <SettingsOutlinedIcon />
+                </div>
+                <div>
+                  <span className="title m-name">General</span>
+                </div>
+                <div className="badge upt-bdg"></div>
+              </NavLink>
+            </div>
+            <div>
             <NavLink id="menu-itm" to="explore">
               <div className="m-icn">
                 <ExploreOutlinedIcon />
@@ -63,12 +87,12 @@ function Sidebar() {
           </div>
 
           <div>
-            <NavLink id="menu-itm" to="storefront">
+            <NavLink id="menu-itm" to="storebook">
               <div className="m-icn">
                 <StorefrontOutlinedIcon />
               </div>
               <div>
-                <span className="title m-name">Storefront</span>
+                <span className="title m-name">Storebook</span>
               </div>
               <div className="badge upt-bdg"></div>
             </NavLink>
@@ -128,19 +152,17 @@ function Sidebar() {
               <div className="badge upt-bdg"></div>
             </NavLink>
           </div>
+          </div>
         </div>
-      </div>
-      <div className="usr-prof">
-        <UserProfile />
-      </div>
-
-      <div>
-        <button className="toggle">
-          <MenuOutlinedIcon />
-        </button>
+        <div className="usr-prof">
+          <UserProfile />
+        </div>
       </div>
     </div>
   );
 }
 
 export default Sidebar;
+
+
+

@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function SupplyDock() {
   return (
     <div className="supplydock">
-      <title>Supply Dock | Ateker</title>
+      <title>Supply Dock</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

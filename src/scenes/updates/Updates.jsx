@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 const Updates = () => {
   return (
     <div>
-      <title>Updates | Ateker</title>
+      <title>Updates</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

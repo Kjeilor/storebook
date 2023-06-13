@@ -1,0 +1,24 @@
+.spl-scrn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f7;
+
+  .logo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+
+      .icn{
+          max-width: 8rem;
+        }
+
+      .txt{
+          position: fixed;
+          bottom: 3rem;
+          max-width: 20rem;
+        }
+    }
+}

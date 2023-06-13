@@ -14,10 +14,10 @@ import Support from "../scenes/general/pages/support/Support";
 
 import Explore from "../scenes/explore/Explore";
 
-import Storefront from "../scenes/storefront/Storefront";
-import Dashboard from "../scenes/storefront/pages/dashboard/Dashboard";
-import Customers from "../scenes/storefront/pages/customers/Customers";
-import Orders from "../scenes/storefront/pages/orders/Orders";
+import Storebook from "../scenes/storebook/Storebook";
+import Dashboard from "../scenes/storebook/pages/dashboard/Dashboard";
+import Customers from "../scenes/storebook/pages/customers/Customers";
+import Orders from "../scenes/storebook/pages/orders/Orders";
 
 import Teams from "../scenes/teams/Teams";
 
@@ -58,12 +58,12 @@ const Router = () => {
 
       <Route
         path="/"
-        element={<Navigate to="storefront" element={<Storefront />} />}
+        element={<Navigate to="storebook" element={<Storebook />} />}
       >
         <Route path="login" element={<Login />} />
       </Route>
 
-      <Route path="storefront" element={<Storefront />}>
+      <Route path="storebook" element={<Storebook />}>
         <Route index element={<Navigate to="dashboard" />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="customers" element={<Customers />} />

@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function General() {
   return (
     <div>
-      <title>General | Ateker</title>
+      <title>General</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

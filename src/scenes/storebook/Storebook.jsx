@@ -1,12 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import "../styles/navbar.scss";
-import "./storefront.scss";
+import "./storebook.scss";
 
-function Storefront() {
+function Storebook() {
   return (
     <div className="storefront">
-      <title>Storefront | Ateker</title>
+      <title>Storebook</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">
@@ -43,4 +43,4 @@ function Storefront() {
   );
 }
 
-export default Storefront;
+export default Storebook;

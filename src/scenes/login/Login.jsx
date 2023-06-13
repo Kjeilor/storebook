@@ -1,7 +1,7 @@
 function Login() {
     return (
         <div>
-            <title>Log in | Ateker</title>
+            <title>Log in</title>
             Login
         </div>
     )

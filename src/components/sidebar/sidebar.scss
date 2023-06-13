@@ -1,6 +1,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-width: 15rem;
   position: absolute;
   z-index: 100;
@@ -8,91 +9,98 @@
   border-right: 1px solid #dcdcdc;
   border-top-width: 0px;
   border-bottom-width: 0px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0s;
-  will-change: transform;
-  transform: translateX(-15rem);
-  height: 100%;
-  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
 
-  .biz-prof {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid lightgray;
+  &.hidden {
+    transform: translateX(-15rem);
   }
 
-  .menu-bar {
-    overflow-y: auto;
-    flex: 1 1 0%;
+  .sidebar-content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
-    .menu-wrp {
-      padding: 1rem;
-
-      .m-title {
-        color: #262626;
-        padding-left: 0.5rem;
-      }
-
-      #menu-itm {
-        position: relative;
-        padding: 0rem;
-        margin-bottom: 0.5rem;
-        height: 2.5rem;
-        border-radius: 5px;
-        align-items: center;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        padding: 0rem 0.5rem;
-        gap: 0.5rem;
-        font-size: small;
-        font-weight: bold;
-        color: #656565;
-
-        .m-icn {
-          font-size: small;
+    .biz-prof {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid lightgray;
+    }
+  
+    .menu-bar {
+      overflow-y: auto;
+      flex-grow: 1;
+  
+      .menu-wrp {
+        padding: 1rem;
+  
+        .m-title {
+          color: #262626;
+          padding-left: 0.5rem;
         }
-
-        .badge {
-          margin-right: 0.5rem;
-          width: 0.5rem;
-          height: 0.5rem;
-          background-color: orangered;
-          border-radius: 50%;
-          color: white;
+  
+        #menu-itm {
+          position: relative;
+          padding: 0rem;
+          margin-bottom: 0.5rem;
+          height: 2.5rem;
+          border-radius: 5px;
+          align-items: center;
+          text-decoration: none;
           display: flex;
           align-items: center;
-          justify-content: center;
-          position: absolute;
-          top: 50;
-          right: 0;
-        }
-
-        &:hover {
-          color: #262626;
-          background-color: #2626261a;
-        }
-
-        &.active {
-          color: #ffffff;
-          background-color: #29ab87;
-
+          padding: 0rem 0.5rem;
+          gap: 0.5rem;
+          font-size: small;
+          font-weight: bold;
+          color: #656565;
+  
+          .m-icn {
+            font-size: small;
+          }
+  
           .badge {
-            background-color: palegreen;
+            margin-right: 0.5rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: orangered;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50;
+            right: 0;
+          }
+  
+          &:hover {
+            color: #262626;
+            background-color: #2626261a;
+          }
+  
+          &.active {
+            color: #ffffff;
+            background-color: #29ab87;
+  
+            .badge {
+              background-color: palegreen;
+            }
           }
         }
       }
     }
-  }
-
-  .usr-prof {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid lightgray;
+  
+    .usr-prof {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid lightgray;
+      bottom: 0;
+    }
+  
   }
 
   .toggle {
@@ -124,7 +132,6 @@
       top: 0.3rem;
       right: -4rem;
       z-index: 100;
-      display: block;
     }
   }
 
@@ -133,3 +140,4 @@
     transform: none;
   }
 }
+

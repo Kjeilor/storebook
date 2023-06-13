@@ -5,7 +5,7 @@ import "../styles/navbar.scss";
 function Teams() {
   return (
     <div className="teams">
-      <title>Teams | Ateker</title>
+      <title>Teams</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">
