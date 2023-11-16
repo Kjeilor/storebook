@@ -1,0 +1,75 @@
+.msg-scns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .unrd-msgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .unrd-cmpts {
+      .unrd-lbl {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+
+    .empty-state{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+      align-items: center;
+        .unrd-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .emptyunread {
+            width: 50%;
+        }
+        }
+    }
+  }
+
+  .all-msgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .all-cmpts {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .all-lbl {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+      align-items: center;
+
+      .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .emptyinbox {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

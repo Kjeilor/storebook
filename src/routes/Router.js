@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Login from "../scenes/login/Login";
+import Login from "../scenes/auth/Login";
+import Signup from "../scenes/auth/Signup"
 
 import Updates from "../scenes/updates/Updates";
 import Inbox from "../scenes/updates/Pages/inbox/Inbox";
@@ -60,6 +61,7 @@ const Router = () => {
         path="/"
         element={<Navigate to="storebook" element={<Storebook />} />}
       >
+        <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
       </Route>
 

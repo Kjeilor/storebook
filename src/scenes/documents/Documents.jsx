@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
-import "../styles/navbar.scss";
+import "../navBarStyle/navbar.scss";
 
 function Documents() {
   return (

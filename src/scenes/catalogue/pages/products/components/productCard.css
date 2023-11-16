@@ -1,0 +1,58 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  width: 15rem;
+  height: 22rem;
+}
+
+.card .pc-scn-1 .prd-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: lightgray;
+  height: 11rem;
+  width: 15rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card .pc-scn-1 .prd-attr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin: .5rem .5rem;
+}
+
+.card .pc-scn-2 {
+  width: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.card .pc-scn-2 .prd-ttl {
+  margin: .5rem 0rem;
+}
+/*# sourceMappingURL=productCard.css.map */

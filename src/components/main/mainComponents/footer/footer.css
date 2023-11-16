@@ -1,0 +1,64 @@
+.ftr-wrpr {
+  z-index: 5;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.ftr-wrpr .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 50px;
+  background: none;
+}
+
+.ftr-wrpr .footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  color: #656565;
+}
+
+.ftr-wrpr .footer .links .lnk-cntr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ftr-wrpr .footer .links .lnk-cntr #ftr-lnk {
+  text-decoration: none;
+  color: #656565;
+}
+
+.ftr-wrpr .footer .links .lnk-cntr #ftr-lnk:hover {
+  color: #29ab87;
+}
+/*# sourceMappingURL=footer.css.map */

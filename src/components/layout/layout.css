@@ -1,0 +1,11 @@
+.layout {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  max-height: 100vh;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAQzB;;AAVD,AAII,SAJK,CAIL,aAAa,CAAA;EACT,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "Priheadr.scss"
+    ],
+    "names": [],
+    "file": "Priheadr.css"
+}

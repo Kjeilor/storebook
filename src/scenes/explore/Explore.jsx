@@ -1,6 +1,6 @@
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import "../styles/navbar.scss";
+import "../navBarStyle/navbar.scss";
 
 function Explore() {
   return (

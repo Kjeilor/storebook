@@ -1,0 +1,193 @@
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 15rem;
+  position: absolute;
+  z-index: 100;
+  background-color: #ffffff;
+  border-right: 1px solid #dcdcdc;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.sidebar.hidden {
+  -webkit-transform: translateX(-15rem);
+          transform: translateX(-15rem);
+}
+
+.sidebar .sidebar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar .sidebar-content .biz-prof {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.sidebar .sidebar-content .menu-bar {
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp {
+  padding: 1rem;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp .m-title {
+  color: #262626;
+  padding-left: 0.5rem;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm {
+  position: relative;
+  padding: 0rem;
+  margin-bottom: 0.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  gap: 0.5rem;
+  font-size: small;
+  font-weight: bold;
+  color: #656565;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm .m-icn {
+  font-size: small;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm .badge {
+  margin-right: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: orangered;
+  border-radius: 50%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50;
+  right: 0;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm:hover {
+  color: #262626;
+  background-color: #2626261a;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm.active {
+  color: #ffffff;
+  background-color: #29ab87;
+}
+
+.sidebar .sidebar-content .menu-bar .menu-wrp #menu-itm.active .badge {
+  background-color: palegreen;
+}
+
+.sidebar .sidebar-content .usr-prof {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid lightgray;
+  bottom: 0;
+}
+
+.sidebar .toggle {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #656565;
+  padding: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .toggle:hover {
+  color: #262626;
+  background-color: #2626261a;
+}
+
+.sidebar .toggle:active {
+  color: #ffffff;
+  background-color: #29ab87;
+}
+
+@media (max-width: 48em) {
+  .sidebar .toggle {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: none;
+    border-radius: 50%;
+    top: 0.3rem;
+    right: -4rem;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*# sourceMappingURL=sidebar.css.map */

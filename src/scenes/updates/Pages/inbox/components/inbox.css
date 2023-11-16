@@ -1,0 +1,22 @@
+.inbx-wrpr {
+  background-color: #ffffff;
+  margin: 1.5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.inbx-wrpr .scn-wrpr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+}
+/*# sourceMappingURL=inbox.css.map */

@@ -1,11 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
-import "../styles/navbar.scss";
+import "../navBarStyle/navbar.scss";
 
 const Updates = () => {
   return (
     <div>
-      <title>Updates</title>
+      <title>Updates | Storebook</title>
       <nav className="nav-btns">
         <div className="nav-wrpr">
           <div className="container">

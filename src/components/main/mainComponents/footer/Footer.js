@@ -19,7 +19,7 @@ function Footer() {
           </div>
           <div className="lnk-cntr">
             <small>
-              &copy; {today.getFullYear()} - Storefront | Ateker
+              &copy; {today.getFullYear()} - Storebook | Ateker
             </small>
           </div>
         </nav>

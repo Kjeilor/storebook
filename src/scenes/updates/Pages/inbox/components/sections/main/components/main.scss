@@ -1,0 +1,20 @@
+.main-wrpr{
+    display: flex;
+    flex-direction: column;
+    flex: 3 1 0;
+    width: 100%;
+
+    .elmnt-cont{
+        //padding: 1rem;
+        background-color: #eeeeee;
+        height: 100%;
+        border-radius: .5rem;
+
+        .hdr-scn{
+            border-radius: .5rem .5rem 0rem 0rem;
+            margin: 0rem;
+            background-color: lightblue;
+            padding: 2rem;
+        }
+    }
+}
