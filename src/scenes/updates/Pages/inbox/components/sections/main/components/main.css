@@ -12,10 +12,16 @@
   width: 100%;
 }
 
-.main-wrpr .main-cont {
-  padding: 1rem;
+.main-wrpr .elmnt-cont {
   background-color: #eeeeee;
   height: 100%;
   border-radius: .5rem;
+}
+
+.main-wrpr .elmnt-cont .hdr-scn {
+  border-radius: .5rem .5rem 0rem 0rem;
+  margin: 0rem;
+  background-color: lightblue;
+  padding: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

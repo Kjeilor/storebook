@@ -15,31 +15,40 @@
   border-radius: 5px;
   width: 15rem;
   height: 22rem;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.card .pc-scn-1 .prd-img {
+.card.expanded {
+  width: 30rem;
+  height: 22rem;
+}
+
+.card .default-view .prd-img,
+.card .expanded-view .prd-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: lightgray;
   height: 11rem;
-  width: 15rem;
+  width: 14rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
 }
 
-.card .pc-scn-1 .prd-attr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin: .5rem .5rem;
+.card .default-view .prd-img img,
+.card .expanded-view .prd-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.card .pc-scn-2 {
-  width: 14rem;
+.card .default-view .pc-scn-1,
+.card .expanded-view .pc-scn-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,12 +56,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.card .pc-scn-2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
 }
 
 .card .pc-scn-2 .prd-ttl {
-  margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 /*# sourceMappingURL=productCard.css.map */

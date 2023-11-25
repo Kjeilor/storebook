@@ -7,32 +7,48 @@
   border-radius: 5px;
   width: 15rem;
   height: 22rem;
+  cursor: pointer;
+  overflow: hidden;
 
-  .pc-scn-1 {
+  &.expanded {
+    width: 30rem; 
+    height: 22rem; 
+  }
+
+  .default-view,
+  .expanded-view {
     .prd-img {
       display: flex;
       background-color: lightgray;
       height: 11rem;
-      width: 15rem;
+      width: 14rem;
       justify-content: center;
       border-radius: 5px 5px 0px 0px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
-    .prd-attr {
+    .pc-scn-1 {
       display: flex;
+      flex-direction: column;
       gap: 0.5rem;
-      margin: .5rem .5rem;
+      margin: 0.5rem 0.5rem;
     }
   }
 
   .pc-scn-2 {
-    width: 14rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
 
     .prd-ttl {
-      margin: .5rem 0rem;
+      margin: 0.5rem 0rem;
     }
   }
 }

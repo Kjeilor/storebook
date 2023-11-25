@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Product 3",
+      "attributes": [
+        "Attr-Col",
+        "Attr-Mat",
+        "Attr-Siz"
+      ],
+      "sku": "SKU456",
+      "description": "Description for Product 3",
+      "price": 29.99,
+      "rating": 3.8,
+      "image": "https://example.com/product2.jpg"
+    }
+  ]
+}
