@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/attributes.scss"
 
 function Attributes({ attributes }) {
   if (!attributes || attributes.length === 0) {
