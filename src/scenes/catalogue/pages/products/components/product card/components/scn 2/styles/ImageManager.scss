@@ -1,0 +1,13 @@
+.image-manager {
+    height: 100%;
+  .image-preview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    img {
+      background-color: green;
+      align-items: center;
+    }
+  }
+}

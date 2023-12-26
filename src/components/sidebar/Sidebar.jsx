@@ -47,7 +47,7 @@ function Sidebar() {
         <div className="menu-bar">
           <div className="menu-wrp">
             <div>
-              <NavLink id="menu-itm" to="/updates">
+              <NavLink id="menu-itm" to="/Updates">
                 <div className="m-icn">
                   <NotificationsOutlinedIcon />
                 </div>

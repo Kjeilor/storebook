@@ -6,10 +6,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate an asynchronous operation (e.g., API request, data fetching)
     setTimeout(() => {
-      setIsLoading(false); // Set isLoading to false to hide the splash screen
-    }, 3000); // Adjust the delay as per your preference
+      setIsLoading(false); 
+    }, 3000);
   }, []);
 
   return (

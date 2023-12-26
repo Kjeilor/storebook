@@ -1,5 +1,5 @@
 import "./content.scss";
-import Router from "../../../../routes/Router";
+import Router from "../../../../Router";
 
 function Content() {
   return (

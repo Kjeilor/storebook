@@ -1,3 +1,5 @@
+import {React} from "react";
+import { Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "../navBarStyle/navbar.scss";
@@ -28,6 +30,7 @@ function Teams() {
 
       <main>
         Teams
+        <Outlet />
       </main>
     </div>
   );
