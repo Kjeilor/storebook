@@ -10,7 +10,7 @@ import StorebookRoutes from "./routes/StorebookRoutes";
 import SupplyDockRoutes from "./routes/SupplyDockRoutes";
 import TeamsRoutes from "./routes/TeamsRoutes";
 import UpdateRoutes from "./routes/UpdateRoutes";
-import LandingPage from "./components/landingPage/LandingPage";
+import LandingPage from "./pages/landingPage/LandingPage";
 
 import { AuthContext } from './contexts/AuthContext';
 
