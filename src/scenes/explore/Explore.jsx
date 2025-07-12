@@ -1,3 +1,4 @@
+import React from "react";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "../navBarStyle/navbar.scss";

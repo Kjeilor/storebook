@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink, Outlet } from "react-router-dom";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import "../navBarStyle/navbar.scss";

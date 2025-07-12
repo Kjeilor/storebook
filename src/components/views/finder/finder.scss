@@ -1,0 +1,48 @@
+// catalogue/pages/offerings/components/find bar/finder.scss
+
+.finder-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da; // Light border
+    border-radius: 8px; // Rounded corners
+    overflow: hidden; // Ensures children respect border-radius
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px; // Subtle shadow
+  
+    .finder-input {
+      flex-grow: 1; // Allows input to take up most space
+      padding: 0.75rem 1rem; // Generous padding
+      border: none; // Remove default input border
+      outline: none; // Remove outline on focus
+      font-size: 1rem;
+      color: #495057; // Darker text color
+  
+      &::placeholder {
+        color: #adb5bd; // Lighter placeholder text
+      }
+    }
+  
+    .finder-button {
+      background-color: transparent; // No background
+      border: none; // No border
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+  
+      .finder-icon {
+        color: #6c757d; // Icon color
+        font-size: 1.5rem; // Larger icon
+      }
+  
+      &:hover {
+        background-color: #e9ecef; // Light hover background
+      }
+  
+      &:active {
+        background-color: #dee2e6; // Even lighter active background
+      }
+    }
+  }

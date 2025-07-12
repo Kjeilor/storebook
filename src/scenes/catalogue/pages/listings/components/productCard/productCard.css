@@ -1,0 +1,129 @@
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  width: 15rem;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.card .pc-scn-1 {
+  width: 100%;
+  z-index: 1;
+  background-color: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .pc-scn-1 .sc1-wrpr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.card .pc-scn-1 .sc1-wrpr .chk-bx {
+  position: relative;
+  cursor: pointer;
+}
+
+.card .pc-scn-1 .sc1-wrpr .chk-bx .bx {
+  display: none;
+}
+
+.card .pc-scn-1 .sc1-wrpr .chk-bx .bx:checked + .checkmark::before {
+  content: '\2716';
+  font-size: large;
+  color: #262626;
+}
+
+.card .pc-scn-1 .sc1-wrpr .chk-bx .checkmark {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: #26262666;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.card .pc-scn-1 .sc1-wrpr .cta-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: #26262666;
+  border: none;
+  color: #262626;
+  border-radius: 50%;
+  height: 1.8rem;
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+.card .pc-scn-1 .sc1-wrpr .cta-btn .btn-icn {
+  font-size: large;
+}
+
+.card .pc-scn-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 0;
+  background-color: lightgray;
+  height: 12.5rem;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .pc-scn-2 .prd-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=productCard.css.map */

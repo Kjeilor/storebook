@@ -1,0 +1,160 @@
+// src/scenes/catalogue/pages/listings/components/product card/productCard.scss
+
+// Redeclared variables for this file only, as no global variables file exists
+$primary-color: #29ab87;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa; // Not directly used in card, but good to have
+$card-background: #ffffff;
+$border-radius: 8px;
+$shadow-light: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+$spacing-unit: 1rem;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // align-items: center; // Consider removing this if it misaligns content
+  background-color: $card-background;
+  box-shadow: $shadow-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+  padding: $spacing-unit; // Internal padding of the card
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  // REMOVE fixed width/height here if you want flex to control it:
+  // width: 15rem; // Remove if you want flex to control width
+  // height: 25rem; // Remove if you want content to control height
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  }
+
+  &.expanded {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  }
+
+  // --- Internal sections of the ProductCard ---
+  .pc-scn-1 {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .sc1-wrpr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+
+      .chk-bx {
+        position: relative;
+        cursor: pointer;
+
+        .bx {
+          display: none;
+
+          &:checked + .checkmark::before {
+            content: '\2716';
+            font-size: large;
+            color: #262626;
+          }
+        }
+
+        .checkmark {
+          position: relative;
+          height: 1.8rem;
+          width: 1.8rem;
+          background-color: rgba(38, 38, 38, 0.4);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+        }
+      }
+
+      .cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(38, 38, 38, 0.4);
+        border: none;
+        color: #ffffff;
+        border-radius: 50%;
+        height: 1.8rem;
+        width: 1.8rem;
+        cursor: pointer;
+
+        .btn-icn {
+          font-size: large;
+        }
+      }
+    }
+  }
+
+  .pc-scn-2 {
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-color: lightgray;
+    height: 12.5rem; // This fixed height for the image area is fine
+    width: 100%; // Ensure it takes full width of card
+    align-items: center;
+    justify-content: center;
+
+    .prd-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .Pc-scn-3 {
+    flex-grow: 1;
+    padding-top: $spacing-unit / 2;
+
+    .prd-dtls {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-unit / 4;
+
+      .name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: $primary-color;
+      }
+      .sku, .attr, .rating {
+        font-size: 0.9rem;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  button {
+    margin-top: $spacing-unit;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: $border-radius / 2;
+    cursor: pointer;
+    align-self: flex-end;
+    &:hover {
+      background-color: darken(#dc3545, 10%);
+    }
+  }
+
+  &.products-card {}
+  &.services-card {}
+  &.giftcards-card {}
+}

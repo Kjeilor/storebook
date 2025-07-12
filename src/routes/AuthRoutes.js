@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "../scenes/auth/Login";
-import Signup from "../scenes/auth/Signup";
+import Login from "../components/auth/Login";
+import Signup from "../components/auth/Signup";
 
 const AuthRoutes = () => {
   return (
