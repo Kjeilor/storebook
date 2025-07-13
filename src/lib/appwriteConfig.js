@@ -1,11 +1,14 @@
-import { Client, Databases, Query, Account } from 'appwrite'; // Appwrite SDK import
+// src/lib/appwriteConfig.js
+import { Client, Account, Databases, Storage, Query } from 'appwrite';
 
-const client = new Client(); // Initialize Client
+const client = new Client()
+  .setEndpoint(process.env.REACT_APP_APPWRITE_URL || 'https://fra.cloud.appwrite.io/v1')
+  .setProject(process.env.REACT_APP_APPWRITE_PROJECT || '68377ee1002690c35152');
 
-client
-    .setEndpoint('https://fra.cloud.appwrite.io/v1') // Your Appwrite API Endpoint
-    .setProject('68377ee1002690c35152'); // Your project ID (verified from console)
-
-export const account = new Account(client); // Initialize Account
-export const databases = new Databases(client); // Initialize Databases
-export { client, Query }; // Export Query (it's a static class, not an instance)
+export const account   = new Account(client);
+export const databases = new Databases(client);
+export const storage   = new Storage(client);
+export { Query };      // only if you need it elsewhere
+export const DATABASE_ID = process.env.REACT_APP_APPWRITE_DATABASE_ID || 'main';
+export const COLLECTION_BUSINESSES = 'businesses';
+export const BUCKET_LOGOS = 'logos';
