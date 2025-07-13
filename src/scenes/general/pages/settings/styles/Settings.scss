@@ -1,0 +1,36 @@
+.settings {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: var(--text-color);
+  }
+
+  .settings-section {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      color: var(--text-color);
+    }
+
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--text-color);
+      cursor: pointer;
+
+      input[type='checkbox'] {
+        width: 1.25rem;
+        height: 1.25rem;
+        accent-color: var(--primary-color);
+      }
+    }
+  }
+}

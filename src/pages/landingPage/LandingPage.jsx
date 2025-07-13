@@ -20,7 +20,7 @@ const LandingPage = () => (
       <a href="/contact">Contact Us</a>
       <a href="/terms">Terms</a>
       <a href="/privacy">Privacy</a>
-      <span>&copy; {new Date().getFullYear()} Store Book.</span>
+      <span>&copy; {new Date().getFullYear()} Ateker | Storebook.</span>
     </footer>
   </div>
 );

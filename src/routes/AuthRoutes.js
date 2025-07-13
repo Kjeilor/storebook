@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "../components/auth/Login";
-import SignUpBusiness from "../pages/auth/SignUpBusiness"; 
+import SignUpBusiness from '../pages/auth/SignUpWizard.jsx'; 
 
 const AuthRoutes = () => {
   return (
