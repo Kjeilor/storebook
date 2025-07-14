@@ -1,11 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import "./content.scss";
-import Router from "../../../../../Router";
 
 function Content() {
   return (
     <div className="cont-wrpr">
-      <Router />
+      <Outlet />
+      Hello
     </div>
   );
 }

@@ -1,42 +1,37 @@
-import React, { useState } from 'react';
-import StepBusinessDetails from './components/StepBusinessDetails';
-import StepOwnerDetails from './components/StepOwnerDetails';
-import StepVerification from './components/StepVerification';
-import './styles/SignUpBusiness.scss';
+import React, { useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { createBusiness } from '../../services/business.service';
+import { account } from '../../lib/appwriteConfig';
+import Splash from '../../components/splash/Splash';
+import './styles/SignUpWizard.scss';
 
-const TOTAL_STEPS = 3;
+const SignUpWizard = ({ data }) => {
+  const navigate = useNavigate();
 
-const SignUpBusiness = () => {
-  const [step, setStep] = useState(1);
-  const [data, setData] = useState({}); // all collected data
+  useEffect(() => {
+    const finish = async () => {
+      try {
+        await account.create(
+          'unique()',
+          data.ownerEmail,
+          data.password,
+          data.ownerName
+        );
+        await account.createEmailPasswordSession(
+          data.ownerEmail,
+          data.password
+        );
+        await createBusiness(data);
+        navigate('/Storebook/dashboard', { replace: true });
+      } catch (err) {
+        alert('Sign-up failed: ' + err.message);
+        console.error(err);
+      }
+    };
+    finish();
+  }, [data, navigate]);
 
-  const nextStep = (partial) => {
-    setData({ ...data, ...partial });
-    setStep((s) => Math.min(s + 1, TOTAL_STEPS));
-  };
-
-  const prevStep = () => setStep((s) => Math.max(s - 1, 1));
-
-  const renderStep = () => {
-    switch (step) {
-      case 1:
-        return <StepBusinessDetails nextStep={nextStep} />;
-      case 2:
-        return <StepOwnerDetails nextStep={nextStep} prevStep={prevStep} />;
-      case 3:
-        return <StepVerification data={data} prevStep={prevStep} />;
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className="signup-business">
-      <h1>Create your business account</h1>
-      <p>Step {step} of {TOTAL_STEPS}</p>
-      {renderStep()}
-    </div>
-  );
+  return <Splash text="Setting up your dashboard…" />;
 };
 
-export default SignUpBusiness;
+export default SignUpWizard;

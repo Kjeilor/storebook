@@ -11,8 +11,8 @@ import SupplyDockRoutes from "./routes/SupplyDockRoutes";
 import TeamsRoutes from "./routes/TeamsRoutes";
 import UpdateRoutes from "./routes/UpdateRoutes";
 import LandingPage from "./pages/landingPage/LandingPage";
-import ErrorBoundary from './components/app/ErrorBoundary';
-import NotFound from './pages/404/404.jsx';
+import ErrorBoundary from "./components/app/ErrorBoundary";
+import NotFound from "./pages/404/404.jsx";
 
 import { AuthContext } from "./contexts/AuthContext";
 
@@ -22,20 +22,10 @@ const Router = () => {
   return (
     <ErrorBoundary>
       <Routes>
-        {/* Conditional route for the root path "/" */}
         <Route
           path="/"
-          element={
-            isAuthenticated ? (
-              // If authenticated, redirect to the dashboard
-              <Navigate to="/Storebook/dashboard" replace />
-            ) : (
-              // If not authenticated, show the LandingPage
-              <LandingPage />
-            )
-          }
+          element={isAuthenticated ? <Navigate to="/Storebook/dashboard" replace /> : <LandingPage />}
         />
-
         <Route path="Auth/*" element={<AuthRoutes />} />
 
         <Route path="catalogue/*" element={<CatalogueRoutes />} />

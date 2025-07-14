@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import Router from './Router';
-import Layout from './components/views/layout/Layout';
-import Splash from './components/splash/Splash';
-import { AuthContext } from './contexts/AuthContext';
+import React from "react";
+import Layout from "./components/layout/Layout";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function AppWrapper() {
-  const { user, loading } = useContext(AuthContext);
-
-  if (loading) return <Splash text="Store Book" />;          // 1. auth-check splash
-  return user ? <Layout /> : <Router />;                    // 2. dashboard or landing
+  console.log("AppWrapper rendering…");
+  return (
+    <AuthProvider>
+      <Layout />
+    </AuthProvider>
+  );
 }
 
 export default AppWrapper;

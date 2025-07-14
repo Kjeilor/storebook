@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./sidebar.scss";
 import { NavLink } from "react-router-dom";
 import BizProfile from "./sidebarComponents/bizProfile/BizProfile";
 import UserProfile from "./sidebarComponents/userProfile/UserProfile";
@@ -13,6 +12,7 @@ import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import DirectionsBoatOutlinedIcon from "@mui/icons-material/DirectionsBoatOutlined";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import "../styles/Sidebar.scss";
 
 function Sidebar() {
   const [isSidebarVisible, setSidebarVisible] = useState(true);

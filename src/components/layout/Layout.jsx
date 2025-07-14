@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import Sidebar from "../sidebar/Sidebar";
-import Main from "../main/Main";
-// import Splash from "./components/splash/Splash";
-import "./layout.scss";
+import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from './sidebar/Sidebar';
+import Main from './main/Main';
+import './styles/Layout.scss';
 
 function Layout() {
-  
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
@@ -15,7 +14,10 @@ function Layout() {
   return (
     <div className="layout">
       <Sidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} />
-      <Main />
+      <div className="layout__content">
+        <Outlet />
+        <Main />
+      </div>
     </div>
   );
 }

@@ -1,11 +1,16 @@
 import { account } from '../lib/appwriteConfig';
 
-export const login = (email, pwd) =>
-  account.createEmailPasswordSession(email, pwd).then(() => account.get());
+export const getCurrentUser = () => account.get().catch(() => null);
 
-export const register = (email, pwd, name) =>
-  account.create('unique()', email, pwd, name);
+export const login = async (email, pwd) => {
+  await account.createEmailPasswordSession(email, pwd);
+  return account.get();
+};
+
+export const register = async (email, pwd, name) => {
+  await account.create('unique()', email, pwd, name);
+  await account.createEmailPasswordSession(email, pwd);
+  return account.get();
+};
 
 export const logout = () => account.deleteSession('current');
-
-export const getCurrentUser = () => account.get();

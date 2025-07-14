@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { databases, Query } from '../../../../lib/appwriteConfig';
 
 import ProductCard from "./components/productCard/ProductCard";
-import SearchBar from "../../../../components/views/searchBar/SearchBar";
+import SearchBar from "../../../../components/layout/searchBar/SearchBar";
 import OfferingTypeSelector from "../../components/OfferingTypeSelector/OfferingTypeSelector";
 import "./listingsPage.scss";
 
