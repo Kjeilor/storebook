@@ -1,11 +1,10 @@
 import React from 'react';
-import './Dashboard.scss';
 
 function Dashboard() {
   return (
-    <div className="dashboard">
+    <div style={{ padding: '2rem', background: '#fff' }}>
       <h1>Dashboard</h1>
-      <p>Welcome to your Store Book dashboard!</p>
+      <p>Business overview will go here.</p>
     </div>
   );
 }

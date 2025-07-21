@@ -6,10 +6,11 @@ import Orders from '../scenes/storebook/pages/orders/Orders';
 
 const StorebookRoutes = () => (
   <Routes>
-    <Route index element={<Dashboard />} />
     <Route path="dashboard" element={<Dashboard />} />
     <Route path="customers" element={<Customers />} />
     <Route path="orders" element={<Orders />} />
+    {/* Default route when user lands on /Storebook */}
+    <Route index element={<Dashboard />} />
   </Routes>
 );
 

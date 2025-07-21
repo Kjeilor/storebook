@@ -13,21 +13,26 @@ import UpdateRoutes from "./routes/UpdateRoutes";
 import LandingPage from "./pages/landingPage/LandingPage";
 import ErrorBoundary from "./components/app/ErrorBoundary";
 import NotFound from "./pages/404/404.jsx";
-
 import { AuthContext } from "./contexts/AuthContext";
 
 const Router = () => {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, loading } = useContext(AuthContext);
+
+  if (loading) return null; // or <LoadingSpinner />
 
   return (
     <ErrorBoundary>
       <Routes>
         <Route
           path="/"
-          element={isAuthenticated ? <Navigate to="/Storebook/dashboard" replace /> : <LandingPage />}
+          element={
+            isAuthenticated
+              ? <Navigate to="/Storebook" replace />
+              : <LandingPage />
+          }
         />
-        <Route path="Auth/*" element={<AuthRoutes />} />
 
+        <Route path="Auth/*" element={<AuthRoutes />} />
         <Route path="catalogue/*" element={<CatalogueRoutes />} />
         <Route path="Documents/*" element={<DocumentRoutes />} />
         <Route path="Explore/*" element={<ExploreRoutes />} />
@@ -42,5 +47,3 @@ const Router = () => {
     </ErrorBoundary>
   );
 };
-
-export default Router;
