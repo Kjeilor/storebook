@@ -1,8 +1,14 @@
 import React from "react";
-import Layout from "./components/layout/Layout";
+import { Router } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 
 function AppWrapper() {
-  return <Layout />;
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  
+  );
 }
 
 export default AppWrapper;

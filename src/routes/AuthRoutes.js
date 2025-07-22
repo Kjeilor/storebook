@@ -1,15 +1,14 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Login from "../components/auth/Login";
-import SignUpBusiness from '../pages/auth/SignUpWizard.jsx'; 
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SignIn from '../pages/auth/SignIn';
+import SignUp from '../pages/auth/SignUp';
 
-const AuthRoutes = () => {
-  return (
-    <Routes>
-      <Route path="login" element={<Login />} />
-      <Route path="signup/business/*" element={<SignUpBusiness />} />
-    </Routes>
-  );
-};
+const AuthRoutes = () => (
+  <Routes>
+    <Route path="signin" element={<SignIn />} />
+    <Route path="signup" element={<SignUp />} />
+    <Route index element={<SignIn />} />
+  </Routes>
+);
 
 export default AuthRoutes;

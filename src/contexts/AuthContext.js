@@ -1,50 +1,18 @@
-import React, { useState, useEffect, createContext } from "react";
-import {
-  getCurrentUser,
-  login,
-  register,
-  logout,
-} from "../services/auth.service";
+import React, { createContext, useContext } from 'react';
 
-export const AuthContext = createContext(null);
+const AuthContext = createContext({
+  currentUser: { id: 'dev-user', email: 'dev@storebook.test' },
+  isAuthenticated: true,
+  loading: false,
+  signIn: () => Promise.resolve(),
+  signUp: () => Promise.resolve(),
+  logOut: () => Promise.resolve(),
+});
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+export const useAuth = () => useContext(AuthContext);
 
-  useEffect(() => {
-    getCurrentUser()
-      .then((user) => {
-        console.log("✅ User fetched:", user);
-        setUser(user);
-      })
-      .catch((err) => {
-        console.error("❌ Error fetching user:", err);
-        setUser(null);
-      })
-      .finally(() => {
-        console.log("✅ Finished auth loading");
-        setLoading(false);
-      });
-  }, []);
-
-  const authLogin = (email, pwd) => login(email, pwd).then(setUser);
-  const authRegister = (email, pwd, name) =>
-    register(email, pwd, name).then(setUser);
-  const authLogout = () => logout().then(() => setUser(null));
-
-  return (
-    <AuthContext.Provider
-      value={{
-        user,
-        loading,
-        isAuthenticated: !!user,
-        login: authLogin,
-        register: authRegister,
-        logout: authLogout,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
+export const AuthProvider = ({ children }) => (
+  <AuthContext.Provider value={AuthContext._currentValue}>
+    {children}
+  </AuthContext.Provider>
+);

@@ -1,14 +1,8 @@
 import React from 'react';
-import { AuthProvider } from './contexts/AuthContext'; // Import AuthProvider
-import AppWrapper from './AppWrapper'; // Import the new AppWrapper component
+import AppRoutes from './AppRoutes';
 
 function App() {
-  return (
-    <AuthProvider>
-      <AppWrapper />
-    </AuthProvider>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
-
