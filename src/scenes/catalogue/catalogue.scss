@@ -13,7 +13,7 @@
 
     .catalogue-sidebar {
       width: 250px; /* Adjust as needed based on your screenshot */
-      background-color: #ffffff; /* Light background for sidebar */
+      background-color: none; /* Light background for sidebar */
       padding: 20px;
       border-right: 1px solid #eee;
       display: flex;
@@ -24,10 +24,9 @@
         h3 {
           font-size: 1.1em;
           margin-bottom: 10px;
-          color: #333;
+          
         }
         small {
-          color: #777;
           font-size: 0.85em;
         }
       }

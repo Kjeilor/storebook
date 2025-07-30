@@ -6,7 +6,6 @@ function Content() {
   return (
     <div className="cont-wrpr">
       <Outlet />
-      Hello
     </div>
   );
 }

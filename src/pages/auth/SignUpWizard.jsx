@@ -1,37 +1,42 @@
-import React, { useEffect} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createBusiness } from '../../services/business.service';
-import { account } from '../../lib/appwriteConfig';
-import Splash from '../../components/splash/Splash';
-import './styles/SignUpWizard.scss';
+import { useAuth } from '../../contexts/AuthContext';
 
-const SignUpWizard = ({ data }) => {
-  const navigate = useNavigate();
+export default function SignUpWizard() {
+  const [step, setStep] = useState(1);
+  const { signIn } = useAuth();
+  const nav = useNavigate();
 
-  useEffect(() => {
-    const finish = async () => {
-      try {
-        await account.create(
-          'unique()',
-          data.ownerEmail,
-          data.password,
-          data.ownerName
-        );
-        await account.createEmailPasswordSession(
-          data.ownerEmail,
-          data.password
-        );
-        await createBusiness(data);
-        navigate('/Storebook/dashboard', { replace: true });
-      } catch (err) {
-        alert('Sign-up failed: ' + err.message);
-        console.error(err);
-      }
-    };
-    finish();
-  }, [data, navigate]);
+  const next = () => setStep(s => s + 1);
+  const finish = () => {
+    signIn();            // stub
+    nav('/storebook', { replace: true });
+  };
 
-  return <Splash text="Setting up your dashboard…" />;
-};
+  return (
+    <div className="wizard">
+      <h1>Sign-Up Wizard – Step {step}</h1>
 
-export default SignUpWizard;
+      {step === 1 && (
+        <>
+          <p>Step 1 – Business name</p>
+          <button onClick={next}>Next</button>
+        </>
+      )}
+
+      {step === 2 && (
+        <>
+          <p>Step 2 – Contact info</p>
+          <button onClick={next}>Next</button>
+        </>
+      )}
+
+      {step === 3 && (
+        <>
+          <p>Step 3 – Confirm details</p>
+          <button onClick={finish}>Finish & enter Storebook</button>
+        </>
+      )}
+    </div>
+  );
+}

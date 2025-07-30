@@ -1,17 +1,20 @@
-import React from 'react'
+import React from "react";
+import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import "./UserProfile.scss";
 
 function UserProfile() {
   return (
-    <div>
-      <div>
-        <button>
-          <div></div>
-          <div>User Name</div>
-          <div></div>
-        </button>
+    <div className="user-profile-btn">
+      <div className="button-wrpr">
+        <div className="avatar-wrapper">
+          {/* placeholder avatar */}
+          <img src="/avatar.png" alt="avatar" />
+        </div>
+        <div className="name">User Name</div>
+        <MoreVertOutlinedIcon className="kebab" />
       </div>
     </div>
-  )
+  );
 }
 
-export default UserProfile
+export default UserProfile;

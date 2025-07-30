@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import BizProfile from "./sidebarComponents/bizProfile/BizProfile";
 import UserProfile from "./sidebarComponents/userProfile/UserProfile";
@@ -14,155 +14,116 @@ import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutl
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "../styles/Sidebar.scss";
 
-function Sidebar() {
-  const [isSidebarVisible, setSidebarVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setSidebarVisible(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const toggleSidebar = () => {
-    setSidebarVisible(!isSidebarVisible);
-  };
-
+function Sidebar({
+  isSidebarVisible,
+  toggleSidebar,
+  sidebarOpen,
+  toggleSidebarMobile,
+}) {
   return (
-    <div className={`sidebar ${isSidebarVisible ? "" : "hidden"}`}>
-      <button className="toggle" onClick={toggleSidebar}>
+    <>
+      {/* Toggle Button */}
+      <button className="sidebar-toggle" onClick={toggleSidebarMobile}>
         <MenuOutlinedIcon />
       </button>
-      <div className="sidebar-content">
-        <div className="biz-prof">
-          <BizProfile />
-        </div>
-        <div className="menu-bar">
-          <div className="menu-wrp">
-            <div>
-              <NavLink id="menu-itm" to="/Updates">
-                <div className="m-icn">
-                  <NotificationsOutlinedIcon />
-                </div>
-                <div>
+
+      <div
+        className={`sidebar ${isSidebarVisible ? "" : "hidden"} ${
+          sidebarOpen ? "open" : ""
+        }`}
+      >
+        <div className="sidebar-content">
+          <div className="biz-prof">
+            <BizProfile />
+          </div>
+          <div className="menu-bar">
+            <div className="menu-wrp">
+              <div>
+                <NavLink id="menu-itm" to="/Updates">
+                  <div className="m-icn">
+                    <NotificationsOutlinedIcon />
+                  </div>
                   <span className="title m-name">Updates</span>
-                </div>
-                <div className="badge upt-bdg"></div>
-              </NavLink>
-            </div>
-            <div>
-              <NavLink id="menu-itm" to="general">
-                <div className="m-icn">
-                  <SettingsOutlinedIcon />
-                </div>
-                <div>
+                  <div className="badge upt-bdg"></div>
+                </NavLink>
+              </div>
+
+              <div>
+                <NavLink id="menu-itm" to="/general">
+                  <div className="m-icn">
+                    <SettingsOutlinedIcon />
+                  </div>
                   <span className="title m-name">General</span>
+                  <div className="badge upt-bdg"></div>
+                </NavLink>
+              </div>
+
+              <div>
+                <NavLink id="menu-itm" to="/explore">
+                  <div className="m-icn">
+                    <ExploreOutlinedIcon />
+                  </div>
+                  <span className="title m-name">Explore</span>
+                  <div className="badge upt-bdg"></div>
+                </NavLink>
+              </div>
+
+              <div className="divider">
+                <h4 className="title m-title">Workstation</h4>
+              </div>
+
+              <NavLink id="menu-itm" to="/storebook">
+                <div className="m-icn">
+                  <StorefrontOutlinedIcon />
                 </div>
-                <div className="badge upt-bdg"></div>
+                <span className="title m-name">Storebook</span>
+              </NavLink>
+
+              <NavLink id="menu-itm" to="/teams">
+                <div className="m-icn">
+                  <PeopleOutlineOutlinedIcon />
+                </div>
+                <span className="title m-name">Teams</span>
+              </NavLink>
+
+              <NavLink id="menu-itm" to="/catalogue">
+                <div className="m-icn">
+                  <ViewInArOutlinedIcon />
+                </div>
+                <span className="title m-name">Catalogue</span>
+              </NavLink>
+
+              <NavLink id="menu-itm" to="/marketing">
+                <div className="m-icn">
+                  <CampaignOutlinedIcon />
+                </div>
+                <span className="title m-name">Marketing</span>
+              </NavLink>
+
+              <NavLink id="menu-itm" to="/supplydock">
+                <div className="m-icn">
+                  <DirectionsBoatOutlinedIcon />
+                </div>
+                <span className="title m-name">Supply Dock</span>
+              </NavLink>
+
+              <NavLink id="menu-itm" to="/documents">
+                <div className="m-icn">
+                  <InsertDriveFileOutlinedIcon />
+                </div>
+                <span className="title m-name">Documents</span>
               </NavLink>
             </div>
-            <div>
-            <NavLink id="menu-itm" to="explore">
-              <div className="m-icn">
-                <ExploreOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Explore</span>
-              </div>
-              <div className="badge upt-bdg"></div>
+          </div>
+          <div className="usr-prof">
+            <NavLink to="/profile/user" className="user-link">
+              <UserProfile />
             </NavLink>
           </div>
-
-          <div>
-            <div>
-              <h4 className="title m-title">Workstation</h4>
-            </div>
-          </div>
-
-          <div>
-            <NavLink id="menu-itm" to="storebook">
-              <div className="m-icn">
-                <StorefrontOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Storebook</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="teams">
-              <div className="m-icn">
-                <PeopleOutlineOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Teams</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="catalogue">
-              <div className="m-icn">
-                <ViewInArOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Catalogue</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="marketing">
-              <div className="m-icn">
-                <CampaignOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Marketing</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="supplydock">
-              <div className="m-icn">
-                <DirectionsBoatOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Supply Dock</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          <div>
-            <NavLink id="menu-itm" to="documents">
-              <div className="m-icn">
-                <InsertDriveFileOutlinedIcon />
-              </div>
-              <div>
-                <span className="title m-name">Documents</span>
-              </div>
-              <div className="badge upt-bdg"></div>
-            </NavLink>
-          </div>
-          </div>
-        </div>
-        <div className="usr-prof">
-          <UserProfile />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
 export default Sidebar;
-
-
-

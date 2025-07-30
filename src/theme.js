@@ -1,5 +1,6 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 //Color Design Tockens
 
@@ -159,7 +160,7 @@ export const themeSettings = (mode) => {
               light: colors.gray[100],
             },
             background: {
-              default: "#f8f8f8",
+              default: "#fefefe",
             },
           }),
     },
@@ -189,6 +190,10 @@ export const themeSettings = (mode) => {
       h6: {
         fontFamily: ["Arial", "Helvetica", "sans-serif"].join(","),
         fontSize: 14,
+      },
+      small: {
+        fontFamily: ["Arial", "Helvetica", "sans-serif"].join(","),
+        fontSize: 12,
       },
     },
   };

@@ -2,13 +2,14 @@
   z-index: 5;
   width: 100%;
   height: fit-content;
+  border-top: 1px solid lightgray;
+
   .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 50px;
-    background: none;
 
     .links {
       display: flex;
@@ -16,7 +17,7 @@
       justify-content: center;
       align-items: center;
       gap: 3rem;
-      color: #656565;
+      
 
       .lnk-cntr {
         display: flex;
@@ -24,10 +25,9 @@
         width: fit-content;
         justify-content: center;
         align-items: center;
+
         #ftr-lnk {
           text-decoration: none;
-          color: #656565;
-          
 
           &:hover {
             color: #29ab87;

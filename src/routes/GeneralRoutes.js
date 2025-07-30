@@ -5,6 +5,7 @@ import Settings from "../scenes/general/pages/settings/Settings";
 import Billing from "../scenes/general/pages/billing/Billing";
 import Support from "../scenes/general/pages/support/Support";
 
+
 const GeneralRoutes = () => {
   return (
     <Routes>
